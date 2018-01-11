@@ -1,0 +1,56 @@
+title 接口自动化测试
+
+------Start-------------------------------------------------------
+rem
+报告目录通过用IP地址索引
+http://10.139.30.76/microserver/microserver25.html
+
+
+报告目录用域名地址索引
+http://DELL-TEST-ANDRI.vcredit.cn/microserver/microserver25.html
+------Start-------------------------------------------------------
+
+
+------Start-------------------------------------------------------
+rem  nginx安装部署 http://nginx.org/en/docs/windows.html
+
+nginx 部署
+1  下载nginxwindows版本
+2  解压到指定目录
+3  启动nginx   
+
+查看进程  tasklist /fi "imagename eq nginx.exe" 
+启动命令  nginx start 
+------End---------------------------------------------------------
+
+
+
+------Start-------------------------------------------------------
+rem 修改host把ip地址和域名对应上
+
+打开C:\Windows\System32\drivers\etc\hosts文件，增加下列文字
+10.139.30.76    DELL-TEST-ANDRI.vcredit.cn              # x client host
+------End---------------------------------------------------------
+
+
+
+------Start-------------------------------------------------------
+rem jenkins-slave 构建脚本
+dir
+echo %JOB_URL%
+dir
+
+echo %BUILD_URL%
+echo %BUILD_NUMBER%
+cd /d apitestrobot
+dir 
+C:\Python\Python36\python jenkins_start.py %BUILD_NUMBER%
+
+cd %WORKSPACE%
+copy /Y tempfile D:\nginx-1.13.7\nginx-1.13.7\html\microserver\
+------End---------------------------------------------------------
+
+
+
+
+
