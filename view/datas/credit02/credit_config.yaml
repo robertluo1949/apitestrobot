@@ -1,0 +1,7 @@
+# 20171129 Emily
+---
+runtime: python3
+testIp:10.139.60.162
+testPort:9345
+applyCreditReport:/micro/credit/applyCreditReport
+getCreditReport:/micro/credit/getCreditReport

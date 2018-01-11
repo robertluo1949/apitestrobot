@@ -1,0 +1,6 @@
+内容概况
+C   Control   接口自动化测试的后台控制部分
+    提供文件操作的方法
+目录说明：
+basecontrol  :提供基础的控制类 ，如report 属性,http属性
+lib  :提供引用的库
