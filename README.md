@@ -8,3 +8,4 @@
 1  启动方式：python start.py (不是从IDE运行run with unitest)
 2  启动方式:   python jenkins_start.py     %BUILD_NUMBER%   (jenkins 命令启动)
 报告输出位置：默认在d盘reports目录 (在conf.ini中[reports]区域进行配置)
+3  nginx 是web服务器，用例存储展示报告
