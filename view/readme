@@ -1,5 +1,0 @@
-内容概况
-V   view   接口自动化测试的试图部分
-    单个单个的接口测试case包括unitest case和data 两个部分
-cases        ：unitest case编辑
-data         : inputoutput  的项
